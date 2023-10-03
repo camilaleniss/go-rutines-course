@@ -8,8 +8,8 @@ import (
 
 var (
 	// two ways to apply syncronization
-	lock   = sync.Mutex{}
-	rwLock = sync.RWMutex{}
+	lock   = sync.Mutex{}   // lock
+	rwLock = sync.RWMutex{} // read-write lock -> only for read operations so, multiple threads can read at the same time
 )
 
 // what happen when we call this?
